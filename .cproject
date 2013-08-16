@@ -30,6 +30,9 @@
 								</outputEntries>
 							</builder>
 							<tool id="com.android.gcc.compiler.1309190316" name="Android GCC Compiler" superClass="com.android.gcc.compiler">
+								<option id="com.android.gcc.option.includePath.91051692" superClass="com.android.gcc.option.includePath" valueType="includePath">
+									<listOptionValue builtIn="false" value="/Users/simon/Dev/android-ndk-r9/platforms/android-18/arch-arm/usr/include"/>
+								</option>
 								<inputType id="com.android.gcc.inputType.870306541" superClass="com.android.gcc.inputType"/>
 							</tool>
 						</toolChain>
@@ -51,5 +54,10 @@
 		<scannerConfigBuildInfo instanceId="com.android.toolchain.gcc.491769436;com.android.toolchain.gcc.491769436.1142786655;com.android.gcc.compiler.1309190316;com.android.gcc.inputType.870306541">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.android.AndroidPerProjectProfile"/>
 		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/opengl-android"/>
+		</configuration>
 	</storageModule>
 </cproject>
