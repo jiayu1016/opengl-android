@@ -16,7 +16,7 @@ static void engine_handle_cmd(android_app* app, int32_t cmd)
 
 static int32_t engine_handle_input(android_app* app, AInputEvent* event)
 {
-	static_cast<Engine*>(app->userData)->handleInput(event);
+	return static_cast<Engine*>(app->userData)->handleInput(event);
 }
 
 void android_main(android_app* app)

@@ -7,6 +7,8 @@
 
 #include <cstdint>
 
+#include <EGL/egl.h>
+
 #ifndef ENGINE_H
 #define ENGINE_H
 
@@ -23,6 +25,9 @@ class Engine {
 	android_app* app;
 	int width = 0;
 	int height = 0;
+	EGLDisplay display = EGL_NO_DISPLAY;
+	EGLSurface surface = EGL_NO_CONTEXT;
+	EGLContext context = EGL_NO_SURFACE;
 	enum class Shaders : int {FLAT = 0, PHONG, GOURAUD};
 	Shaders currentShader;
 public:
