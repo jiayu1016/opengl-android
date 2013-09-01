@@ -20,6 +20,7 @@ local.properties
 .classpath
 .project
 .cproject
+.settings/
 
 # MAC
 .DS_Store
