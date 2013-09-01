@@ -11,7 +11,7 @@ using namespace Chaonis;
 
 static void engine_handle_cmd(android_app* app, int32_t cmd)
 {
-	static_cast<Engine*>(app->userData)->engine.handleCommand(cmd);
+	static_cast<Engine*>(app->userData)->handleCommand(cmd);
 }
 
 static int32_t engine_handle_input(android_app* app, AInputEvent* event)
@@ -50,11 +50,11 @@ void android_main(android_app* app)
 
             // Process this event.
             if (source != NULL) {
-                source->process(state, source);
+                source->process(app, source);
             }
 
             // Check if we are exiting.
-            if (state->destroyRequested != 0) {
+            if (app->destroyRequested != 0) {
                 engine.terminateDisplay();
                 return;
             }

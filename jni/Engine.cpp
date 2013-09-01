@@ -70,13 +70,13 @@ int32_t Engine::handleInput(AInputEvent* event)
 
 void Engine::restoreFromState(SavedState* state)
 {
-	currentShader = state->currentShader;
+	currentShader = static_cast<Shaders> (state->currentShader);
 }
 
 void Engine::saveState()
 {
-	SavedState* savedState = malloc(sizeof(SavedState));
-	savedState->currentShader = currentShader;
+	SavedState* savedState = static_cast<SavedState*>(malloc(sizeof(SavedState)));
+	savedState->currentShader = static_cast<int>(currentShader);
 	app->savedState = savedState;
 	app->savedStateSize = sizeof(SavedState);
 }

@@ -26,7 +26,7 @@ class Engine {
 	enum class Shaders : int {FLAT = 0, PHONG, GOURAUD};
 	Shaders currentShader;
 public:
-	Engine();
+	Engine(android_app* app);
 
 	void handleCommand(int32_t cmd);
 	int32_t handleInput(AInputEvent* event);
